@@ -2,8 +2,8 @@
 //  IntroLayer.h
 //  Skizze
 //
-//  Created by Surasak Sermluxananon on 10/20/55 BE.
-//  Copyright __MyCompanyName__ 2555. All rights reserved.
+//  Created by Skizze Team on 10/20/55 BE.
+//  Copyright 2012 Thomson Reuters. All rights reserved.
 //
 
 

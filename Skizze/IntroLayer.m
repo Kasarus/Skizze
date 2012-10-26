@@ -2,14 +2,14 @@
 //  IntroLayer.m
 //  Skizze
 //
-//  Created by Surasak Sermluxananon on 10/20/55 BE.
-//  Copyright __MyCompanyName__ 2555. All rights reserved.
+//  Created by Skizze Team on 10/20/55 BE.
+//  Copyright 2012 Thomson Reuters. All rights reserved.
 //
 
 
 // Import the interfaces
 #import "IntroLayer.h"
-#import "HelloWorldLayer.h"
+#import "DrawbyTouchLayer.h"
 
 
 #pragma mark - IntroLayer
@@ -47,7 +47,7 @@
 		background = [CCSprite spriteWithFile:@"Default.png"];
 		background.rotation = 90;
 	} else {
-		background = [CCSprite spriteWithFile:@"Default-Landscape~ipad.png"];
+		background = [CCSprite spriteWithFile:@"Default.png"];
 	}
 	background.position = ccp(size.width/2, size.height/2);
 
@@ -60,6 +60,6 @@
 
 -(void) makeTransition:(ccTime)dt
 {
-	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[HelloWorldLayer scene] withColor:ccWHITE]];
+	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[DrawbyTouchLayer scene] withColor:ccWHITE]];
 }
 @end
