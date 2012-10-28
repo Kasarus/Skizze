@@ -9,14 +9,19 @@
 #import <GameKit/GameKit.h>
 #import "cocos2d.h"
 
+namespace tesseract {
+    class TessBaseAPI;
+};
+
 @interface DrawbyTouchLayer : CCLayer
 {
-    CGPoint             startLocation_;
-    CGPoint             finalLocation_;
-    CCSprite            *bg_;
-    CCMotionStreak      *line_;
-    float               screenwidth_;
-    float               screenheight_;
+    CGPoint                 startLocation_;
+    CGPoint                 finalLocation_;
+    CCSprite                *bg_;
+    CCMotionStreak          *line_;
+    float                   screenwidth_;
+    float                   screenheight_;
+    tesseract::TessBaseAPI  *tesseract;
 }
 
 

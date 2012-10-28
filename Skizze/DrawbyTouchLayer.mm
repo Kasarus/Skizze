@@ -6,7 +6,10 @@
 //  Copyright 2012 Thomson Reuters. All rights reserved.
 //
 
+#include "baseapi.h"
+#include "environ.h"
 #import "DrawbyTouchLayer.h"
+#import "pix.h"
 
 @implementation DrawbyTouchLayer
 
@@ -33,6 +36,9 @@
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super init]) )
     {
+        // init the tesseract engine.
+        tesseract = new tesseract::TessBaseAPI();
+        
         self.isTouchEnabled = YES;
         
         CGSize screen_size = [[CCDirector sharedDirector] winSize];
@@ -42,7 +48,6 @@
         bg_             = [CCSprite spriteWithFile:@"blackboard-bg.png"];
         bg_.position    = ccp(screenwidth_ / 2, screenheight_ / 2);
         [self addChild:bg_];
-        
     }
 
     return self;

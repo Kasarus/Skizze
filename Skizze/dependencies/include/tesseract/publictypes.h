@@ -54,16 +54,16 @@ enum PolyBlockType {
 };
 
 // Returns true if PolyBlockType is of horizontal line type
-inline bool PTIsLineType(PolyBlockType type) {
+inline bool PTIsLineType(enum PolyBlockType type) {
   return type == PT_HORZ_LINE || type == PT_VERT_LINE;
 }
 // Returns true if PolyBlockType is of image type
-inline bool PTIsImageType(PolyBlockType type) {
+inline bool PTIsImageType(enum PolyBlockType type) {
   return type == PT_FLOWING_IMAGE || type == PT_HEADING_IMAGE ||
          type == PT_PULLOUT_IMAGE;
 }
 // Returns true if PolyBlockType is of text type
-inline bool PTIsTextType(PolyBlockType type) {
+inline bool PTIsTextType(enum PolyBlockType type) {
   return type == PT_FLOWING_TEXT || type == PT_HEADING_TEXT ||
          type == PT_PULLOUT_TEXT || type == PT_TABLE ||
          type == PT_VERTICAL_TEXT || type == PT_CAPTION_TEXT;
