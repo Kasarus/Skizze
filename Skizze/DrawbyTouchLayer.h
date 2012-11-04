@@ -15,12 +15,14 @@ namespace tesseract {
 
 @interface DrawbyTouchLayer : CCLayer
 {
+    float                   screenwidth_;
+    float                   screenheight_;
     CGPoint                 startLocation_;
     CGPoint                 finalLocation_;
     CCSprite                *bg_;
     CCMotionStreak          *line_;
-    float                   screenwidth_;
-    float                   screenheight_;
+    CCLabelTTF              *recognized_txt;
+    uint32_t                *pixels;
     tesseract::TessBaseAPI  *tesseract;
 }
 

@@ -307,7 +307,6 @@ and when to execute the Scenes.
  */
 -(void) drawScene;
 
-
 // XXX: Hack. Should be placed on CCDirectorMac.h. Refactoring needed
 #if defined(__CC_PLATFORM_MAC)
 /** sets the openGL view */
